@@ -1,7 +1,7 @@
 
 import ContactUsCss from "../Components/ContactUs/ContactUs.module.css";
 
-import locationimg from "../Components/Images/locationimg.png";
+import locationimg from "../Components/Images/location.png";
 import calPhoneimg from "../Components/Images/Container.png";
 import mailMessageImg from "../Components/Images/message.png";
 
