@@ -1,4 +1,4 @@
-import person from "../Components/Images/aboutpeople.png";
+import person from "../Components/images/aboutpeople.png";
 const About = () => {
     return (
         <div className="w-[80%] mx-auto mb-10">

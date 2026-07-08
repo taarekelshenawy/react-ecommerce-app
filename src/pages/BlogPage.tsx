@@ -1,8 +1,8 @@
 import { Link } from "react-router";
-import img_1 from"../Components/Images/blog3.png"
-import img_2 from"../Components/Images/blog5.png"
-import img_3 from"../Components/Images/blog1.png"
-import img_4 from"../Components/Images/sidebar-banner.gif.png"
+import img_1 from "../Components/images/blog3.png";
+import img_2 from "../Components/images/blog5.png";
+import img_3 from "../Components/images/blog1.png";
+import img_4 from "../Components/images/sidebar-banner.gif.png";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles

@@ -1,5 +1,5 @@
-import bannerImage from "../Images/Background.jpeg";
-import deliveryImage from "../Images/banner-box2.jpg.png";
+import bannerImage from "../images/Background.jpeg";
+import deliveryImage from "../images/banner-box2.jpg.png";
 import { Link } from "react-router-dom";
 
 const Slideshow = () => {

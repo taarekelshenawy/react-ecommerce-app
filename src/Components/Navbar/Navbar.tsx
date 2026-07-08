@@ -1,5 +1,5 @@
-import iconnav from '../Images/iconnav.png'
-import baketimg from '../Images/basketimg.png';
+import iconnav from '../images/iconnav.png'
+import baketimg from '../images/basketimg.png';
 import { CiSearch } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { FaShoppingCart } from "react-icons/fa";

@@ -1,5 +1,5 @@
 
-import mainimg from '../Images/Background.jpeg';
+import mainimg from '../images/Background.jpeg';
 import { useAppSelector ,useAppDispatch } from '../../Store/hooks';
 import { getproducts } from '../../Store/getProuductsReducer';
 import { useEffect, useState } from 'react';
