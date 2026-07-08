@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import img_1 from"../Components/Images/blog-3.png"
-import img_2 from"../Components/Images/blog-5.png"
+import img_1 from"../Components/Images/blog3.png"
+import img_2 from"../Components/Images/blog5.png"
 import img_3 from"../Components/Images/blog1.png"
 import img_4 from"../Components/Images/sidebar-banner.gif.png"
 
