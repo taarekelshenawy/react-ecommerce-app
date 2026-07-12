@@ -25,14 +25,14 @@ const validationSchema = Yup.object().shape({
 
   const formik = useFormik({
     initialValues: {
-      email: 'youssef.dev2025@example.com',
-      password: 'Youssef@123',
-    },
+    email: '',
+    password: '',
+  },
     validationSchema: validationSchema, 
     onSubmit:async (values) => {
         const result = await dispatch(Login(values))
         if(Login.fulfilled.match(result)){
-            toast.success("🎉 Registered successfully!");
+            toast.success(" Registered successfully!");
               navigate('/Home')
         }else{
               toast.error(`❌ Registration failed: ${result.payload}`);
@@ -73,7 +73,7 @@ const validationSchema = Yup.object().shape({
        <div>
         <label htmlFor="Email">Email:</label>
         <input
-         className="w-full mt-3 mb-2 p-1 border border-black-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 "
+         className="px-2 w-full mt-3 mb-2 p-1 border border-black-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 "
           id="Email"
           name="email"
           type="text"
@@ -82,13 +82,13 @@ const validationSchema = Yup.object().shape({
           value={formik.values.email}
         />
         {formik.touched.email && formik.errors.email ? (
-          <div>{formik.errors.email}</div>
+          <div className='text-red-600'>{formik.errors.email}</div>
         ) : null}
       </div>
        <div>
         <label htmlFor="password">Password:</label>
         <input
-        className="w-full mt-3 mb-2 p-1 border border-black-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 "
+        className="px-2 w-full mt-3 mb-2 p-1 border border-black-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 "
           id="password"
           name="password"
           type="passwrod"
@@ -97,7 +97,7 @@ const validationSchema = Yup.object().shape({
           value={formik.values.password}
         />
         {formik.touched.password && formik.errors.password ? (
-          <div>{formik.errors.password}</div>
+          <div className='text-red-600'>{formik.errors.password}</div>
         ) : null}
       </div>
 

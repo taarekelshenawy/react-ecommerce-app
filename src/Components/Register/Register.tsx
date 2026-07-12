@@ -5,11 +5,13 @@ import { Register } from '../../Store/Authslice';
 import { useAppDispatch } from '../../Store/hooks';
   import {  toast } from 'react-toastify';
   import { Link } from 'react-router-dom';
+  import { useNavigate } from 'react-router-dom';
 
 
 
 const MyForm = () => {
     const dispatch = useAppDispatch();
+    const navigate = useNavigate()
   
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -47,9 +49,11 @@ const validationSchema = Yup.object().shape({
         const result = await dispatch(Register(values));
 
    if (Register.fulfilled.match(result)) {
-      toast.success("🎉 Registered successfully!");
+      toast.success(" Registered successfully!");
+      navigate('/Home')
+      
     } else if (Register.rejected.match(result)) {
-      toast.error(`❌ Registration failed: ${result.payload}`);
+      toast.error(` Registration failed: ${result.payload}`);
     }
   
       // Handle form submission here (e.g., send data to an API)
@@ -95,7 +99,7 @@ const validationSchema = Yup.object().shape({
           value={formik.values.name}
         />
         {formik.touched.name && formik.errors.name ? (
-          <div>{formik.errors.name}</div>
+          <div className='text-red-600'>{formik.errors.name}</div>
         ) : null}
             </div>
      
@@ -111,7 +115,7 @@ const validationSchema = Yup.object().shape({
                 value={formik.values.email}
                 />
                 {formik.touched.email && formik.errors.email ? (
-                <div>{formik.errors.email}</div>
+                <div  className='text-red-600'>{formik.errors.email}</div>
                 ) : null}
             </div>
             <div>
@@ -126,7 +130,7 @@ const validationSchema = Yup.object().shape({
                 value={formik.values.password}
                 />
                 {formik.touched.password && formik.errors.password ? (
-                <div>{formik.errors.password}</div>
+                <div  className='text-red-600'>{formik.errors.password}</div>
                 ) : null}
             </div>
         <div>
@@ -141,7 +145,7 @@ const validationSchema = Yup.object().shape({
           value={formik.values.rePassword}
         />
         {formik.touched.rePassword && formik.errors.rePassword ? (
-          <div>{formik.errors.rePassword}</div>
+          <div  className='text-red-600'>{formik.errors.rePassword}</div>
         ) : null}
       </div>
         <div>
@@ -156,7 +160,7 @@ const validationSchema = Yup.object().shape({
           value={formik.values.phone}
         />
         {formik.touched.phone && formik.errors.phone ? (
-          <div>{formik.errors.phone}</div>
+          <div  className='text-red-600'>{formik.errors.phone}</div>
         ) : null}
       </div>
 
