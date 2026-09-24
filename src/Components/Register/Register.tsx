@@ -3,9 +3,9 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Register } from '../../Store/Authslice';
 import { useAppDispatch } from '../../Store/hooks';
-  import {  toast } from 'react-toastify';
-  import { Link } from 'react-router-dom';
-  import { useNavigate } from 'react-router-dom';
+import {  toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 

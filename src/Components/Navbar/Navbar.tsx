@@ -51,22 +51,21 @@ export default function Navbar() {
     
   return (
     <div>
-        <div className="w-full bg-[#35AFA0] h-9 flex justify-center  items-center">
-            <p className="font-medium text-white text-[10px] md:text-sm">Due to current circumstances, there may be slight delays in order processing</p>
+        <div className="w-full bg-[#35AFA0] p-2 flex justify-center  items-center">
+            <p className="font-normal text-white text-[12px] ">Due to current circumstances, there may be slight delays in order processing</p>
         </div>
         { token && 
         <>
           <div className='border-b border-[#E3E4E6]'>
-              <div className='text-[12px] text-[#3E445A] font-medium flex  justify-between flex-wrap w-[80%] max-sm:gap-5 mx-auto items-center p-4'>
-                <div>
-                    <ul className="flex gap-3">
+              <div className='text-[12px] text-[#3E445A] font-medium flex items-center  justify-between flex-wrap w-[80%] max-sm:gap-2 mx-auto  p-2'>
+                    <ul className="flex items-center gap-2">
                         <li><Link to="/About">About Us</Link></li>
                         <li>Compare</li>
                         <li><Link to='/wishlist'>Wishlist</Link></li>
                     </ul>
-                </div>
+            
              
-                <div className='flex items-center gap-6  flex-wrap mt-6 max-sm:mt-0 xl:mt-0 xl:gap-0'>
+                <div className='sm:hidden  xl:flex items-center gap-6  flex-wrap max-sm:mt-0 xl:mt-0 xl:gap-0'>
                          <div>
                          <MdMenu className='w-10 h-10 max-sm:block hidden' onClick={()=>setIsmobile(!ismobile)}/>
                         </div>
@@ -87,42 +86,45 @@ export default function Navbar() {
                             <option>Eg</option>
                         </select>
                     </div>
-                   {token ?
-                    <div className='border w-24 h-7 ml-4 flex justify-center items-center rounded-2xl'>
-                    <button className='font-boldt text-lg cursor-pointer' onClick={()=>logout()}>Log out</button>
+
+                </div>
+
+                <div>
+                      {token ?
+                    <div className='border w-24 h-7  flex justify-center items-center rounded-2xl'>
+                    <button className=' text-md font-bold cursor-pointer' onClick={()=>logout()}>Log out</button>
                     </div> :
                     ""}
-
                 </div>
              </div>
           </div>
-        <div className='w-[80%]  mx-auto flex flex-wrap justify-between p-4 border-b'>
+        <div className='w-[80%]  items-center  mx-auto flex flex-wrap justify-between p-1 border-b'>
             <div>
                 <div className='flex items-center'>
-                    <img src={baketimg} alt='basket-img'></img>
-                    <p className='text-[#35AFA0] basket xl:text-4xl font-bold text-2xl'>Basket</p>
+                    <img src={baketimg} alt='basket-img' className='xl:w-16 w-10'></img>
+                    <p className='text-[#35AFA0] basket xl:text-4xl font-bold text-xl'>Basket</p>
                 </div>
                 <p className='text-[#3E445A] text-[11px] font-medium'>Online Grocery Shopping Center</p>
             </div>
-            <div className=' flex justify-between font-medium p-3 mt-6 xl:mt-0 items-center max-sm:w-full   w-[50%] bg-[#F3F4F7] h-[60px]'>
-                <input type='text' placeholder='Search products,clothes,..' className='w-full text-sm'></input>
+            <div className=' max-sm:hidden sm:hidden  lg:flex justify-between font-medium p-2  items-center max-sm:w-full   w-[50%] bg-[#F3F4F7] '>
+                <input type='text' placeholder='Search products,clothes,..' className='w-full text-sm outline-none'></input>
                 <CiSearch />
 
             </div>
-            <div className='flex items-center gap-5 mt-7 xl:mt-0'>
-                <div className='border rounded-full w-12 h-12 flex justify-center items-center'>
-                    <Link to="/login"><CiUser className='w-6 h-6' /></Link>  
+            <div className='flex items-center gap-5 max-sm:mt-3'>
+                <div className='border rounded-full xl:w-12 xl:h-12 w-8 h-8 flex justify-center items-center border-[#E2E4EC]'>
+                    <Link to="/login"><CiUser className='xl:w-6 xl:h-6 w-4 h-4 ' /></Link>  
 
                 </div>
                 <p>$0.00</p>
-                <div className='bg-[#FFF1EE] border rounded-full w-12 h-12 flex justify-center items-center'>
-                <Link to="/cartpage"><FaShoppingCart className='w-6 h-6'/></Link>
+                <div className='bg-[#FFF1EE] border-[#E2E4EC] border rounded-full  xl:w-12 xl:h-12 w-8 h-8 flex justify-center items-center'>
+                <Link to="/cartpage"><FaShoppingCart className='xl:w-6 xl:h-6 w-4 h-4'/></Link>
 
                 </div>
             </div>
            
         </div>
-        <div className='w-[80%] mx-auto p-2 flex justify-between flex-wrap max-sm:flex-col '>
+        <div className='w-[80%] mx-auto p-1 flex items-center justify-between flex-wrap max-sm:flex-col '>
             <div className='relative'>
                 <div className='bg-[#35AFA0] w-60 h-12 rounded-3xl flex justify-center items-center'>
                      <select className='font-semibold text-[#FFFFFF]'>
@@ -144,7 +146,7 @@ export default function Navbar() {
                     <li>CHECKOUT</li>
                     <li><Link to="/Contact">CONTACT</Link></li>
                     </ul> :
-                    <ul className='flex max-sm:hidden  gap-16 items-center font-bold flex-wrap mt-10 xl:mt-0  '>
+                    <ul className='flex max-sm:hidden  gap-4  items-center font-semibold flex-wrap mt-10 xl:mt-0  '>
                         <li className='border  border-gray-400 hover:text-[#35AFA0] rounded-2xl w-20 text-center cursor-pointer'>
                             <Link to='/Home'>HOME</Link></li>
                         <li className='hover:text-[#35AFA0]'><Link to='/Shop' className='cursor-pointer' >SHOP</Link></li>
